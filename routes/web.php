@@ -18,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::get('/','Api\indexController@index');
+Route::get('/slider','Controller@index');
+
+
+Route::get('/importExportView', 'Controller@importExportView');
+Route::get('/export', 'Controller@export')->name('export');
+Route::post('/import', 'Controller@import')->name('import');

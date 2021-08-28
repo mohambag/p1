@@ -13,7 +13,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <!-- Styles -->
     <style>
         /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -101,195 +101,28 @@
             justify-content: center
         }
 
-        .font-semibold {
-            font-weight: 600
-        }
-
-        .h-5 {
-            height: 1.25rem
-        }
-
-        .h-8 {
-            height: 2rem
-        }
-
-        .h-16 {
-            height: 4rem
-        }
-
-        .text-sm {
-            font-size: .875rem
-        }
-
-        .text-lg {
-            font-size: 1.125rem
-        }
-
-        .leading-7 {
-            line-height: 1.75rem
-        }
-
-        .mx-auto {
-            margin-left: auto;
-            margin-right: auto
-        }
-
-        .ml-1 {
-            margin-left: .25rem
-        }
-
-        .mt-2 {
-            margin-top: .5rem
-        }
-
-        .mr-2 {
-            margin-right: .5rem
-        }
-
-        .ml-2 {
-            margin-left: .5rem
-        }
-
-        .mt-4 {
-            margin-top: 1rem
-        }
-
-        .ml-4 {
-            margin-left: 1rem
-        }
-
-        .mt-8 {
-            margin-top: 2rem
-        }
-
-        .ml-12 {
-            margin-left: 3rem
-        }
-
-        .-mt-px {
-            margin-top: -1px
-        }
-
-        .max-w-6xl {
-            max-width: 72rem
-        }
 
         .min-h-screen {
             min-height: 100vh
         }
 
-        .overflow-hidden {
-            overflow: hidden
-        }
-
-        .p-6 {
-            padding: 1.5rem
-        }
 
         .py-4 {
             padding-top: 1rem;
             padding-bottom: 1rem
         }
 
-        .px-6 {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem
-        }
-
-        .pt-8 {
-            padding-top: 2rem
-        }
-
-        .fixed {
-            position: fixed
-        }
 
         .relative {
             position: relative
         }
 
-        .top-0 {
-            top: 0
-        }
-
-        .right-0 {
-            right: 0
-        }
-
-        .shadow {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06)
-        }
-
-        .text-center {
-            text-align: center
-        }
-
-        .text-gray-200 {
-            --text-opacity: 1;
-            color: #edf2f7;
-            color: rgba(237, 242, 247, var(--text-opacity))
-        }
-
-        .text-gray-300 {
-            --text-opacity: 1;
-            color: #e2e8f0;
-            color: rgba(226, 232, 240, var(--text-opacity))
-        }
-
-        .text-gray-400 {
-            --text-opacity: 1;
-            color: #cbd5e0;
-            color: rgba(203, 213, 224, var(--text-opacity))
-        }
-
-        .text-gray-500 {
-            --text-opacity: 1;
-            color: #a0aec0;
-            color: rgba(160, 174, 192, var(--text-opacity))
-        }
-
-        .text-gray-600 {
-            --text-opacity: 1;
-            color: #718096;
-            color: rgba(113, 128, 150, var(--text-opacity))
-        }
-
-        .text-gray-700 {
-            --text-opacity: 1;
-            color: #4a5568;
-            color: rgba(74, 85, 104, var(--text-opacity))
-        }
-
-        .text-gray-900 {
-            --text-opacity: 1;
-            color: #1a202c;
-            color: rgba(26, 32, 44, var(--text-opacity))
-        }
-
-        .underline {
-            text-decoration: underline
-        }
 
         .antialiased {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale
         }
 
-        .w-5 {
-            width: 1.25rem
-        }
-
-        .w-8 {
-            width: 2rem
-        }
-
-        .w-auto {
-            width: auto
-        }
-
-        .grid-cols-1 {
-            grid-template-columns:repeat(1, minmax(0, 1fr))
-        }
 
         @media (min-width: 640px) {
             .sm\:rounded-lg {
@@ -304,38 +137,11 @@
                 align-items: center
             }
 
-            .sm\:justify-start {
-                justify-content: flex-start
-            }
-
-            .sm\:justify-between {
-                justify-content: space-between
-            }
-
-            .sm\:h-20 {
-                height: 5rem
-            }
-
-            .sm\:ml-0 {
-                margin-left: 0
-            }
-
-            .sm\:px-6 {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem
-            }
-
             .sm\:pt-0 {
                 padding-top: 0
             }
 
-            .sm\:text-left {
-                text-align: left
-            }
 
-            .sm\:text-right {
-                text-align: right
-            }
         }
 
         @media (min-width: 768px) {
@@ -390,103 +196,176 @@
                 color: rgba(203, 213, 224, var(--text-opacity))
             }
         }
+
+
     </style>
 
     <style>
         body {
             font-family: 'Nunito', sans-serif;
         }
+
+        .col-md-4 > ul > li {
+            font-size: 14pt;
+        }
+
+        .col-md-6 > ul > li {
+            font-size: 16pt;
+        }
+
+        .border {
+            border: 1px solid gray;
+            border-radius: 7px;
+            padding: 10px 10px;
+        }
     </style>
 </head>
 <body class="antialiased" style="direction: rtl;text-align: center">
 <div
     class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+<div class="container">
 
-    <div class="container justify-center">
-        <div class="col-md-12">
-            <div class="form-row">
 
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>{{$dol['title']}}</h3>
-                            <h4>آخرین بروزرسانی:
-                                {!! mb_substr($dol['updated_at'],13,15,'UTF-8')!!}
-                            </h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    مقدار:
-                                    {{$dol['p']}}
 
-                                    ریال
-                                </div>
-                                <div class="col-md-6">
-                                    وضعیت:
-                                    {{$dol['d']}}
-                                    %
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>{{$eur['title']}}</h3>
-                            <h4>آخرین بروزرسانی:
-                                {!! mb_substr($eur['updated_at'],13,15,'UTF-8')!!}
-                            </h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    مقدار:
-                                    {{$eur['p']}}
 
-                                    ریال
-                                </div>
-                                <div class="col-md-6">
-                                    وضعیت:
-                                    {{$eur['d']}}
-                                    %
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3>{{$der['title']}}</h3>
-                            <h4>آخرین بروزرسانی:
-                                {!! mb_substr($der['updated_at'],13,14,'UTF-8')!!}
-                            </h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    مقدار:
-                                    {{$der['p']}}
-
-                                    ریال
-                                </div>
-                                <div class="col-md-6">
-                                    وضعیت:
-                                    {{$der['d']}}
-                                    %
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-2 border">
+                <div class="form-row">آخرین بروزرسانی/
+                    <a>{!! mb_substr(($dol['t']),0,5,'UTF-8') !!}</a>
                 </div>
 
+                <div class="form-row">دلار
+                    <a>{{$dol['p']}}/({{$dol['dp']}}%)</a>
+                    @if($dol['dt']=="high")
+                        <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
+                    @elseif($dol['dt']=="low")
+                        <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
+                    @endif
+                </div>
+                <div class="form-row">یورو
+                    <a>{{$eur['p']}} / ({{$eur['dp']}}%) </a>
+                    @if($eur['dt']=="high")
+                        <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
+                    @elseif($eur['dt']=="low")
+                        <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
+                    @endif
+                </div>
+                <div class="form-row">
+                    درهم
+                    <a>{{$der['p']}} / ({{$der['dp']}}%)</a>
+                    @if($der['dt']=="high")
+                        <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
+                    @elseif($der['dt']=="low")
+                        <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
+                    @endif
+                </div>
             </div>
 
+
+            <div class="col-md-3 border" style="font-size: 14pt">
+                <div class="form-row">آخرین بروزرسانی/
+                    <a>{!! mb_substr(($dol['t']),0,5,'UTF-8') !!}</a>
+                </div>
+                <div class="form-row">دلار
+                    <a>{{$dol['p']}}/({{$dol['dp']}}%)</a>
+                    @if($dol['dt']=="high")
+                        <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
+                    @elseif($dol['dt']=="low")
+                        <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
+                    @endif
+                </div>
+
+                <div class="form-row">یورو
+                    <a>{{$eur['p']}} / ({{$eur['dp']}}%) </a>
+                    @if($eur['dt']=="high")
+                        <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
+                    @elseif($eur['dt']=="low")
+                        <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
+                    @endif
+                </div>
+
+                <div class="form-row">
+                    درهم
+                    <a>{{$der['p']}} / ({{$der['dp']}}%)</a>
+                    @if($der['dt']=="high")
+                        <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
+                    @elseif($der['dt']=="low")
+                        <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
+                    @endif
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="col-md-5 border">
+        <div class="form-row">
+            <div class="col-md-6">دلار
+                <a>{{$dol['p']}}/({{$dol['dp']}}%)</a>
+                @if($dol['dt']=="high")
+                    <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
+                @elseif($dol['dt']=="low")
+                    <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
+                @endif
+            </div>
+            <div class="col-md-6">یورو
+                <a>{{$eur['p']}} / ({{$eur['dp']}}%) </a>
+                @if($eur['dt']=="high")
+                    <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
+                @elseif($eur['dt']=="low")
+                    <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
+                @endif
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                درهم
+                <a>{{$der['p']}} / ({{$der['dp']}}%)</a>
+                @if($der['dt']=="high")
+                    <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
+                @elseif($der['dt']=="low")
+                    <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
+                @endif
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex flex-row-reverse" style="position: fixed;bottom: 0">
+
+        <div class="p-2 border">آخرین بروز رسانی
+            <a>{!! mb_substr(($dol['t']),0,5,'UTF-8') !!}</a>
+        </div>
+
+        <div class="p-2 border">
+            دلار
+            <a>{{$dol['p']}}/({{$dol['dp']}}%)</a>
+            @if($dol['dt']=="high")
+                <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
+            @elseif($dol['dt']=="low")
+                <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
+            @endif
+        </div>
+        <div class="p-2 border">
+            یورو
+            <a>{{$eur['p']}} / ({{$eur['dp']}}%) </a>
+            @if($eur['dt']=="high")
+                <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
+            @elseif($eur['dt']=="low")
+                <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
+            @endif
+        </div>
+        <div class="p-2 border">     درهم
+            <a>{{$der['p']}} / ({{$der['dp']}}%)</a>
+            @if($der['dt']=="high")
+                <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
+            @elseif($der['dt']=="low")
+                <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
+            @endif</div>
+    </div>
 </div>
+</div>
+
+
 </body>
 <script>
     window.setTimeout(function () {
