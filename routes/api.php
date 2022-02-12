@@ -18,4 +18,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('multiple-image-upload', [\App\Http\Controllers\ImageController::class, 'store']);
+
 Route::resource('/index2','Api\indexController');

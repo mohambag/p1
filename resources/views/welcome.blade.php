@@ -12,6 +12,7 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <!-- Styles -->
@@ -232,136 +233,101 @@
         <div class="row">
             <div class="col-md-2 border">
                 <div class="form-row">آخرین بروزرسانی/
-                    <a>{!! mb_substr(($dol['t']),0,5,'UTF-8') !!}</a>
+                    <a>{!! mb_substr(($total->usd_buy->date),0,11,'UTF-8') !!}</a>
                 </div>
 
                 <div class="form-row">دلار
-                    <a>{{$dol['p']}}/({{$dol['dp']}}%)</a>
-                    @if($dol['dt']=="high")
+                    <a>{{$total->usd_buy->value}}/({{$total->usd_buy->change}} )</a>
+                    @if($total->usd_buy->change > 0)
+
                         <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
-                    @elseif($dol['dt']=="low")
+                    @elseif($total->usd_buy->change < 0)
                         <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
                     @endif
                 </div>
                 <div class="form-row">یورو
-                    <a>{{$eur['p']}} / ({{$eur['dp']}}%) </a>
-                    @if($eur['dt']=="high")
+                    <a>{{$total->eur->value}}/({{$total->eur->change}} )</a>
+                    @if($total->eur->change > 0)
                         <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
-                    @elseif($eur['dt']=="low")
+                    @elseif($total->eur->change < 0)
                         <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
                     @endif
                 </div>
-                <div class="form-row">
-                    درهم
-                    <a>{{$der['p']}} / ({{$der['dp']}}%)</a>
-                    @if($der['dt']=="high")
+                <div class="form-row">درهم امارات
+                    <a>{{$total->aed_sell->value}}/({{$total->aed_sell->change}} )</a>
+                    @if($total->aed_sell->change > 0)
                         <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
-                    @elseif($der['dt']=="low")
+                    @elseif($total->aed_sell->change < 0)
                         <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
                     @endif
                 </div>
-            </div>
-
-
-            <div class="col-md-3 border" style="font-size: 14pt">
-                <div class="form-row">آخرین بروزرسانی/
-                    <a>{!! mb_substr(($dol['t']),0,5,'UTF-8') !!}</a>
-                </div>
-                <div class="form-row">دلار
-                    <a>{{$dol['p']}}/({{$dol['dp']}}%)</a>
-                    @if($dol['dt']=="high")
-                        <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
-                    @elseif($dol['dt']=="low")
-                        <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
-                    @endif
-                </div>
-
-                <div class="form-row">یورو
-                    <a>{{$eur['p']}} / ({{$eur['dp']}}%) </a>
-                    @if($eur['dt']=="high")
-                        <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
-                    @elseif($eur['dt']=="low")
-                        <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
-                    @endif
-                </div>
-
-                <div class="form-row">
-                    درهم
-                    <a>{{$der['p']}} / ({{$der['dp']}}%)</a>
-                    @if($der['dt']=="high")
-                        <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
-                    @elseif($der['dt']=="low")
-                        <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
-                    @endif
-                </div>
-            </div>
-        </div>
+                   </div>
     </div>
 
     <div class="col-md-5 border">
         <div class="form-row">
-            <div class="col-md-6">دلار
-                <a>{{$dol['p']}}/({{$dol['dp']}}%)</a>
-                @if($dol['dt']=="high")
-                    <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
-                @elseif($dol['dt']=="low")
-                    <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
-                @endif
-            </div>
-            <div class="col-md-6">یورو
-                <a>{{$eur['p']}} / ({{$eur['dp']}}%) </a>
-                @if($eur['dt']=="high")
-                    <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
-                @elseif($eur['dt']=="low")
-                    <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
-                @endif
-            </div>
+{{--            <div class="col-md-6">دلار--}}
+{{--                <a>{{$dol['p']}}/({{$dol['dp']}}%)</a>--}}
+{{--                @if($dol['dt']=="high")--}}
+{{--                    <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>--}}
+{{--                @elseif($dol['dt']=="low")--}}
+{{--                    <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>--}}
+{{--                @endif--}}
+{{--            </div>--}}
+{{--            <div class="col-md-6">یورو--}}
+{{--                <a>{{$eur['p']}} / ({{$eur['dp']}}%) </a>--}}
+{{--                @if($eur['dt']=="high")--}}
+{{--                    <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>--}}
+{{--                @elseif($eur['dt']=="low")--}}
+{{--                    <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>--}}
+{{--                @endif--}}
+{{--            </div>--}}
         </div>
         <div class="form-row">
             <div class="col-md-6">
                 درهم
-                <a>{{$der['p']}} / ({{$der['dp']}}%)</a>
-                @if($der['dt']=="high")
-                    <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
-                @elseif($der['dt']=="low")
-                    <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
-                @endif
+{{--                <a>{{$der['p']}} / ({{$der['dp']}}%)</a>--}}
+{{--                @if($der['dt']=="high")--}}
+{{--                    <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>--}}
+{{--                @elseif($der['dt']=="low")--}}
+{{--                    <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>--}}
+{{--                @endif--}}
             </div>
         </div>
     </div>
 
-    <div class="d-flex flex-row-reverse" style="position: fixed;bottom: 0">
+{{--    <div class="d-flex flex-row-reverse" style="position: fixed;bottom: 0">--}}
 
-        <div class="p-2 border">آخرین بروز رسانی
-            <a>{!! mb_substr(($dol['t']),0,5,'UTF-8') !!}</a>
-        </div>
+{{--        <div class="p-2 border">آخرین بروز رسانی--}}
+{{--            <a>{!! mb_substr(($dol['t']),0,5,'UTF-8') !!}</a>--}}
+{{--        </div>--}}
 
-        <div class="p-2 border">
-            دلار
-            <a>{{$dol['p']}}/({{$dol['dp']}}%)</a>
-            @if($dol['dt']=="high")
-                <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
-            @elseif($dol['dt']=="low")
-                <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
-            @endif
-        </div>
-        <div class="p-2 border">
-            یورو
-            <a>{{$eur['p']}} / ({{$eur['dp']}}%) </a>
-            @if($eur['dt']=="high")
-                <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
-            @elseif($eur['dt']=="low")
-                <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
-            @endif
-        </div>
-        <div class="p-2 border">     درهم
-            <a>{{$der['p']}} / ({{$der['dp']}}%)</a>
-            @if($der['dt']=="high")
-                <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>
-            @elseif($der['dt']=="low")
-                <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>
-            @endif</div>
-    </div>
+{{--        <div class="p-2 border">--}}
+{{--            دلار--}}
+{{--            <a>{{$dol['p']}}/({{$dol['dp']}}%)</a>--}}
+{{--            @if($dol['dt']=="high")--}}
+{{--                <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>--}}
+{{--            @elseif($dol['dt']=="low")--}}
+{{--                <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>--}}
+{{--            @endif--}}
+{{--        </div>--}}
+{{--        <div class="p-2 border">--}}
+{{--            یورو--}}
+{{--            <a>{{$eur['p']}} / ({{$eur['dp']}}%) </a>--}}
+{{--            @if($eur['dt']=="high")--}}
+{{--                <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>--}}
+{{--            @elseif($eur['dt']=="low")--}}
+{{--                <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>--}}
+{{--            @endif--}}
+{{--        </div>--}}
+{{--        <div class="p-2 border">     درهم--}}
+{{--            <a>{{$der['p']}} / ({{$der['dp']}}%)</a>--}}
+{{--            @if($der['dt']=="high")--}}
+{{--                <i class='fas fa-angle-up' style='font-size:24px;color: green'></i>--}}
+{{--            @elseif($der['dt']=="low")--}}
+{{--                <i class='fas fa-angle-down' style='font-size:24px;color:red'></i>--}}
+{{--            @endif</div>--}}
+{{--    </div>--}}
 </div>
 </div>
 

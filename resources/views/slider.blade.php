@@ -24,6 +24,20 @@
     <script src={{url("assets/vendors/jquery.min.js")}}></script>
     <script src={{url("assets/owlcarousel/owl.carousel.js")}}></script>
 
+    <style>
+        ul{
+            direction: rtl;
+
+        }
+        li{
+            direction: rtl;
+            display: block;
+            text-decoration: none;
+        }
+        h4{
+            margin-bottom: 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -33,44 +47,84 @@
         <div class="large-12 columns">
             <div class="owl-carousel owl-theme">
                 <div class="item">
-                    <h4>1</h4>
+                        <ul>
+                            <li>
+                                <h4>
+                                    دلار
+                                </h4>
+                                </li>
+                            <li>
+                                <a style="color: white">{{$total->usd_buy->value}} تومان </a>
+                            </li>
+                            <li>
+                                <a style="color: white"> تغییرات  {{$total->usd_buy->change}} تومان </a>
+                            </li>
+                            <li>
+                                <div style="color: white" class="form-row">آخرین بروزرسانی/
+                                    <a  style="color: white;width: 100%">{!! mb_substr(($total->usd_buy->date),0,11,
+                                    'UTF-8')
+                                    !!}</a>
+                                </div>
+                            </li>
+                        </ul>
                 </div>
                 <div class="item">
-                    <h4>2</h4>
+                        <ul>
+                            <li><h4>یورو</h4></li>
+                            <li>
+                                <a style="color: white">{{$total->eur->value}} تومان </a>
+                            </li>
+                            <li>
+                                <a style="color: white"> تغییرات  {{$total->eur->change}} تومان </a>
+                            </li>
+                            <li>
+                                <div style="color: white" class="form-row">آخرین بروزرسانی/
+                                    <a style="color: white">{!! mb_substr(($total->eur->date),0,11,'UTF-8') !!}</a>
+                                </div>
+                            </li>
+                        </ul>
                 </div>
                 <div class="item">
-                    <h4>3</h4>
+                        <ul>
+                            <li><h4>
+                                    درهم امارات
+                                </h4></li>
+                            <li>
+                                <a style="color: white">{{$total->aed_sell->value}} تومان </a>
+                            </li>
+                            <li>
+                                <a style="color: white"> تغییرات  {{$total->aed_sell->change}} تومان </a>
+                            </li>
+                            <li>
+                                <div style="color: white" class="form-row">آخرین بروزرسانی/
+                                    <a style="color: white">{!! mb_substr(($total->aed_sell->date),0,11,'UTF-8') !!}</a>
+                                </div>
+                            </li>
+                        </ul>
                 </div>
                 <div class="item">
-                    <h4>4</h4>
+                        <ul>
+                            <li><h4>
+                                   سکه امامی
+                                </h4></li>
+                            <li>
+                                <a style="color: white">{{number_format($total->sekkeh->value)}}میلیون تومان </a>
+                            </li>
+                            <li>
+                                <a style="color: white"> تغییرات  {{number_format($total->sekkeh->change)}}میلیون
+                                    تومان </a>
+                            </li>
+                            <li>
+                                <div style="color: white" class="form-row">آخرین بروزرسانی/
+                                    <a style="color: white">{!! mb_substr(($total->sekkeh->date),0,11,'UTF-8') !!}</a>
+                                </div>
+                            </li>
+                        </ul>
                 </div>
-                <div class="item">
-                    <h4>5</h4>
-                </div>
-                <div class="item">
-                    <h4>6</h4>
-                </div>
-                <div class="item">
-                    <h4>7</h4>
-                </div>
-                <div class="item">
-                    <h4>8</h4>
-                </div>
-                <div class="item">
-                    <h4>9</h4>
-                </div>
-                <div class="item">
-                    <h4>10</h4>
-                </div>
-                <div class="item">
-                    <h4>11</h4>
-                </div>
-                <div class="item">
-                    <h4>12</h4>
-                </div>
+
             </div>
-            <a class="button secondary play">Play</a>
-            <a class="button secondary stop">Stop</a>
+{{--            <a class="button secondary play">Play</a>--}}
+{{--            <a class="button secondary stop">Stop</a>--}}
 
             <script>
                 $(document).ready(function() {
@@ -86,12 +140,12 @@
                             nav:true,
                             dots: true
                     });
-                    $('.play').on('click', function() {
-                        owl.trigger('play.owl.autoplay', [1000])
-                    })
-                    $('.stop').on('click', function() {
-                        owl.trigger('stop.owl.autoplay')
-                    })
+                    // $('.play').on('click', function() {
+                    //     owl.trigger('play.owl.autoplay', [1000])
+                    // })
+                    // $('.stop').on('click', function() {
+                    //     owl.trigger('stop.owl.autoplay')
+                    // })
                 })
             </script>
         </div>
