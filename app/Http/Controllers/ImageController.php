@@ -23,7 +23,7 @@ class ImageController extends Controller
         }
 
         $allowedfileExtension=['pdf','jpg','png'];
-        $files = $request->file('fileName');
+        $files = $request->file('title');
         $errors = [];
 
         foreach ($files as $file) {
